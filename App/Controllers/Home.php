@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use \Core\View;
-use \App\Models\User;
 use \App\Models\Event;
 
 /**
@@ -24,45 +23,9 @@ class Home extends \Core\Controller
 		View::renderTemplate('Home/index.html');
 	}
 
-	public function indexWithIdAction()
-	{
-		$id = $this->route_params["id"];
-		View::renderTemplate('Home/index_id.html', ['id' => $id]);
-	}
-
-	public function usersAction()
-	{
-		$users = User::getAll();
-		View::renderTemplate('Home/users.html', ['users' => $users]);
-	}
-
-	public function usersJsonAction()
-	{
-		$users = User::getAll();
-		echo json_encode($users);
-	}
-
 	public function eventsJsonAction()
 	{
 		$events = Event::getAll();
 		echo json_encode($events);
-	}
-
-	public function usersWithIdAction()
-	{
-		$id = $this->route_params["id"];
-		$users = User::getUser($id);
-		View::renderTemplate('Home/users.html', ['users' => $users]);
-	}
-	public function usersWithIdJsonAction()
-	{
-		$id = $this->route_params["id"];
-		$users = User::getUser($id);
-		echo json_encode($users);
-	}
-
-	public function usersJs()
-	{
-		View::renderTemplate('Home/users_js.html');
 	}
 }

@@ -27,28 +27,8 @@ $router = new Core\Router();
 
 // Add the routes
 
-// Base route
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
-
-// Route with parameter
-$router->add('{id:\d+}', ['controller' => 'Home', 'action' => 'indexWithId']);
-
-// Route with model
-$router->add('users', ['controller' => 'Home', 'action' => 'users']);
-
-
-// Route with model and parameter
-$router->add('users/{id:\d+}', ['controller' => 'Home', 'action' => 'usersWithId']);
-
-// JSON format
-$router->add('users.json', ['controller' => 'Home', 'action' => 'usersJson']);
-$router->add('users/{id:\d+}.json', ['controller' => 'Home', 'action' => 'usersWithIdJson']);
-
 $router->add('events', ['controller' => 'Home', 'action' => 'eventsJson']);
-
-// Compose page client-side with JavaScript
-$router->add('users2', ['controller' => 'Home', 'action' => 'usersJs']);
-
 $router->add('{controller}/{action}');
 
 $router->dispatch($_SERVER['QUERY_STRING']);
