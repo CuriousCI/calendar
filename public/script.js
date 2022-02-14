@@ -3,11 +3,9 @@ var app = {
 		let origin = window.location.origin,
 			pathname = window.location.pathname
 
-		// Dev only 
-		// $.getJSON(`https://virtserver.swaggerhub.com/alessio.gasparri/Calendar/1.0.0/events`)
+		// $.getJSON(`https://virtserver.swaggerhub.com/IonutCicio/calendar/2.0.0/events`)
 
-		// $.getJSON(`${origin}${pathname}?events`)
-		$.getJSON(`https://virtserver.swaggerhub.com/IonutCicio/calendar/2.0.0/events`)
+		$.getJSON(`${origin}${pathname}?events`)
 			.done(app.writeEvents)
 			.fail(app.onFail)
 	},
@@ -20,13 +18,12 @@ var app = {
 	writeEvents: jsonData => {
 		console.log(jsonData)
 
-		let origin = window.location.origin,
-			pathname = window.location.pathname
+		let pathname = window.location.pathname
 
 		for (event of jsonData)
 			$("ul").append(
 				`
-				<a href="/${origin}${pathname}${event.id}">
+				<a href="${origin}/${pathname}${event.id}">
 					<li class="event">
 						<h1>${event.title}</h1>
 						<div class="details">

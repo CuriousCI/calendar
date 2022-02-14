@@ -28,7 +28,9 @@ $router = new Core\Router();
 // Add the routes
 
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
+$router->add('{id:\d+}', ['controller' => 'Home', 'action' => 'indexId']);
 $router->add('events', ['controller' => 'Home', 'action' => 'eventsJson']);
+$router->add('events/{id:\d+}', ['controller' => 'Home', 'action' => 'eventsJsonId']);
 $router->add('{controller}/{action}');
 
 $router->dispatch($_SERVER['QUERY_STRING']);

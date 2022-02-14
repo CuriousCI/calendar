@@ -8,6 +8,10 @@ body {
     border: unset;
 }
 
+div  {
+	font-size: 20px;
+}
+
 body {
     display: grid;
     grid-template-rows: 50px auto;
@@ -22,6 +26,11 @@ header {
     padding: 1%;
 }
 
+main {
+	box-sizing: border-box;
+	padding: 20px;
+}
+
 ul {
 	list-style-type: none;
 	padding: unset;
@@ -29,6 +38,18 @@ ul {
 
 a {
 	text-decoration: none;
+}
+
+.block {
+	background-color: #e6e6e6;
+
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.value {
+	color: #999999;
 }
 
 img {

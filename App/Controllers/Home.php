@@ -23,9 +23,21 @@ class Home extends \Core\Controller
 		View::renderTemplate('Home/index.html');
 	}
 
+	public function indexIdAction()
+	{
+		View::renderTemplate('Home/index_id.html');
+	}
+
 	public function eventsJsonAction()
 	{
 		$events = Event::getAll();
 		echo json_encode($events);
+	}
+
+	public function eventsJsonIdAction()
+	{
+		$id = $this->route_params["id"];
+		$event = Event::getEvent($id);
+		echo json_encode($event);
 	}
 }
