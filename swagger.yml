@@ -1,11 +1,10 @@
 swagger: "2.0"
 info:
   description: This is a simple calendar API
-  version: 1.0.0
+  version: 2.0.0
   title: Calendar API
-  # put the contact info for your development or API team
   contact:
-    email: alessio.gasparri@marconicloud.it
+    email: ionut.cicio@marconicloud.it
 
   license:
     name: Apache 2.0
@@ -23,32 +22,12 @@ paths:
     get:
       tags:
         - developers
-      summary: searches inventory
-      operationId: searchInventory
+      summary: gets all events
+      operationId: getEvents
       description: |
-        By passing in the appropriate options, you can search for
-        available inventory in the system
+        You can get all the events present in the system
       produces:
         - application/json
-      parameters:
-        - in: query
-          name: searchString
-          description: pass an optional search string for looking up inventory
-          required: false
-          type: string
-        - in: query
-          name: skip
-          description: number of records to skip for pagination
-          type: integer
-          format: int32
-          minimum: 0
-        - in: query
-          name: limit
-          description: maximum number of records to return
-          type: integer
-          format: int32
-          minimum: 0
-          maximum: 50
       responses:
         200:
           description: search results matching criteria
@@ -58,29 +37,79 @@ paths:
               $ref: "#/definitions/Event"
         400:
           description: bad input parameter
-
+  /events/{id}:
+    get:
+      tags:
+        - developers
+      summary: details of an event
+      operationId: eventDetails
+      description: |
+        You can get the partecipants of an event
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          type: integer
+          required: true
+          minimum: 1
+      responses:
+        200:
+          description: get an event with partecpiants
+          schema:
+            $ref: "#/definitions/EventDetails"
+        400:
+          description: bad input parameter
 definitions:
   Event:
     type: object
     required:
-      - name
+      - id
+      - title
       - organizer
-      - price
+      - cost
     properties:
-      name:
+      id:
+        type: number
+        example: 2
+      title:
         type: string
         example: "Seminario Social"
-
       organizer:
         type: string
         example: "Claudio Capobianco"
-
-      price:
+      cost:
         type: number
-        example: "12"
+        example: 12
+  EventDetails:
+    type: object
+    required:
+      - id
+      - title
+      - organizer
+      - cost
+      - participants
+    properties:
+      id:
+        type: number
+        example: 5
+      title:
+        type: string
+        example: "Seminario SQL"
+      organizer:
+        type: string
+        example: "Gianluigi Luigi"
+      cost:
+        type: number
+        example: 13
+      participants:
+        type: array
+        items:
+          type: string
+        example: ["Claudio Mancini", "Salvatore Aranzulla"]
 
 # Added by API Auto Mocking Plugin
 host: virtserver.swaggerhub.com
-basePath: /alessio.gasparri/Calendar/1.0.0
+basePath: /IonutCicio/calendar/2.0.0
 schemes:
   - https
