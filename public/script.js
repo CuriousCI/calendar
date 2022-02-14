@@ -6,7 +6,8 @@ var app = {
 		// Dev only 
 		// $.getJSON(`https://virtserver.swaggerhub.com/alessio.gasparri/Calendar/1.0.0/events`)
 
-		$.getJSON(`${origin}${pathname}?events`)
+		// $.getJSON(`${origin}${pathname}?events`)
+		$.getJSON(`https://virtserver.swaggerhub.com/IonutCicio/calendar/2.0.0/events`)
 			.done(app.writeEvents)
 			.fail(app.onFail)
 	},
@@ -18,15 +19,23 @@ var app = {
 
 	writeEvents: jsonData => {
 		console.log(jsonData)
-		for (event_ of jsonData)
-			$("main").append(
-				`<div class="event">
-					<h1>${event_.name}</h1>
-					<div class="details">
-						<span>by ${event_.organizer}</span>
-						<span> ${event_.price == 0 ? `free` : `${event_.price}€`}
-					</div>
-				</div>`
+
+		let origin = window.location.origin,
+			pathname = window.location.pathname
+
+		for (event of jsonData)
+			$("ul").append(
+				`
+				<a href="/${origin}${pathname}${event.id}">
+					<li class="event">
+						<h1>${event.title}</h1>
+						<div class="details">
+							<span>by ${event.organizer}</span>
+							<span>${event.cost == 0 ? `free` : `${event.cost}€`}</span>
+						</div>
+					</li>
+				</a>
+				`
 			)
 	}
 }
