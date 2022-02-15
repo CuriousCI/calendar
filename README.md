@@ -1,20 +1,10 @@
-# PHP MVC framework
+## Website
+https://studenti.marconicloud.it/b_utente04/calendar/public/
 
-Questo progetto è un fork per gli studenti del Marconi, fork del progetto di [daveh](https://github.com/daveh/php-mvc).
+## API
+- [1.0.0](https://app.swaggerhub.com/apis/IonutCicio/calendar/1.0.0)
+- [2.0.0](https://app.swaggerhub.com/apis/IonutCicio/calendar/2.0.0)
 
-## Istruzioni
-Le istruzioni di seguito sono per far funzionare il progetto sul server della scuola. Per indicazioni generiche, far riferimento direttamente al repository del progetto di daveh.
-1. Fare un fork di questo progetto (è un progetto template)
-2. Clonarlo nella cartella del proprio utente sul server della scuola
-3. Da terminale, lanciare `composer update`
-4. Rinominare i file `.htaccess.rename` in `.htaccess` e modificarlo sostituendo al suo interno `nomeutente` con il vostro nome utente con il quale avete fatto l'accesso
-5. Eseguire la stessa operazione del punto precedente anche con il file `public/.htaccess`
-6. Se tutto è andato a buon fine, dovreste vedere il vostro sito live accedendo direttamente alla cartella del progetto sul server della scuola
-7. Creare rotte, controllers, viste e modelli in base alle esigenze
-
-### Connessione al database
-Rispetto al progetto originale, che usava PDO, qui usiamo mysqli per connetterci al database.
-
-Per impostare i parametri di configurazione per la connessione al db, rinominare `App/Config.php.rename` in `App/Config.php` e modificare le variabili al suo interno.
-
-Per fare delle prove, è presente un file `create_users.sql` per creare una tabella di esempio che funziona con il codice del progetto.
+## Wireframes
+- [1.0.0](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&layers=1&nav=1&title=appuntamenti.drawio#R7Vldb9sgFP01flxl7DhxHjunXR86KVOktX2aiCE2GoaMkMbprx%2FE2InBVbYoH91aVangAhc453C5IV6YFOUXAef5V44w9QIflV448oJg2Our%2F9qwrgxRPKwMmSCoMoGtYUJesDH6xrokCC9aHSXnVJJ525hyxnAqWzYoBF%2B1u804bc86hxl2DJMUUtf6QJDMK2sc%2BVv7HSZZXs8MfNNSwLqzMSxyiPhqxxTeeGEiOJdVqSgTTDV2NS7VuNtXWpuFCczknwwo88Hd02qNZFT%2BWMNkLMSv%2BFOv8vIM6dJs2CxWrmsEBF8yhLUT3ws%2Fr3Ii8WQOU926UpQrWy4LqmpAFY07LCQuX10naHavVIN5gaVYqy71gH5UDTGKAUMD4GqLf1CjnO9gH9aagYbzrPG9hUUVDDJ%2FgVK0HyXM0LWWm6oxznAblTaEuCTycaf8pMtXkamNyp2m0bquMLWPR%2BNuU9kZpavbYZtaPa5aJ0aOyC021F74UqR4v1QkFBmW%2B%2Fq57O6wF3WQV9sEplCS5%2FZyuwg1M4w5URtpxNOrhWHEE4aWJqptmlG7p8V2FLUdBbHlqMLBcbTRV7PtwyXX%2F%2B8ldymJ2PElGBwokXCfoxNLZPAhkTNJpHdoFLEl4jg6sUSCf%2BB6j7qud%2BBy2zvV7Q72g6R3TFRSeA%2BnmI75gkjCmWqacil5oYCpO1xTkukGyS3kmuxPo4zgIm8gX0jBfzbJpek71xMXZaZz6ivIkOAEXc1zdYaDZkjCKReb9YWpr%2F%2BORVD75gNBB0Gg4%2FD1TpZ%2FhQ5DlGf88lIeWEj1O5CKXaBq29Fxih2cJrggDArCNxleSiB1UFP7l5ZWW%2FIyF8eMUGqZoBE7xTPZcQYKgpCepJOJNlczzuTELAnU9eq7IIiPRZZ1W%2FsuWaDrTrFD9tHYGjpsgcC7Cbw48K6TE9Akqj0diyff4ik6Dk%2Fq%2B16bp3Do8tQ7J0%2FAvSCmesEJhUu0OVkJnPMpgSx1Y9JbO102a8FpQmEna%2F2zsubmPmMB2YvmK1WXtxquPgXB5M1zdrKI2G9zFndExP7wnJy5F%2F1MYPx%2BY2FgvWaAi8dC98FwEwu%2FE5bi6nCN9Lm6hfQ9B0Own7bzBkP3BfMBT3VmqIyTb%2FdvnqkzhcCwI4M%2Fcwh0H%2F7AR1LoBMLhxQOh%2B%2Fr2kRTui4NdrB0pDqrq9qe06vls%2B3tkePMb)
+- [2.0.0](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=appuntamenti.drawio#R7Vtdc%2BI2FP01fkzGsrExjykhzezsTmmZ6e4%2B7QhbMWqFRYRYPn59JdvCHxLgJDaQbsIkY11ZsnXO0dXVFbHc4XzzO4OL2RcaIWI5drSx3HvLcXw3EH%2BlYZsZPB9khpjhKDOVDBO8Q7nRzq0rHKFl5UZOKeF4UTWGNElQyCs2yBhdV297oqT61AWMkWaYhJDo1q844rPMGnh2YX9EOJ6pJwM7r5lDdXNuWM5gRNclkzuy3CGjlGdX880QEYmdwiVr93Cgdv9iDCW8SYNPI%2BfT43p14978tX1G%2F9DBdD2%2FcbJefkKyygecvyzfKgQYXSURkp3YlvvbeoY5mixgKGvXgnJhm%2FE5ESUgLvPuEONoc%2FA9wX70QjWIzhFnW3FL3qDne1mTXDFgkAO4LvB3FMqzEvau0gzMOY%2F3fRewiIscmZeg1G8ZpidMyJASytK27siXH2Ffckb%2FRaomoQlqC9Oggqlr9zVMwcDTMQW9zjD13z2mgwqmAtRmmPY7g7TBbI4FpouDo8%2B9KJyq2%2B0Xo9IHt7X56%2FkGXHzD%2FO11hYt9GpdMJcrFg6q09q5byjCCy9lek6JmIXuYb2K5%2FN3CJGIUR7cw5JgmP6aQ6cp8SH80ZYqa0JaffY16G6epYI%2BoQifscnSAbmf%2BAXxfMvNfBKTqxnNrytd17wIdZ8d7O86bWf%2Fx%2B3obcW%2FzYwuHY8aeg5teJ2u75goMYB7G6KJruxEl7zRKKInuZChZiKiEShVCtMH8W%2Bn6u7wWsshK95tS1f1WFRIxjm95d2mh1EoWi2ZpSbU7yMeSrliITiuDQxYjfvo%2BFFVi5KOuxDOQp2wMEcjxz2pkbSI0f8KYYjGyYmlRwlBBjFvTRDbuvFU5Eq535FU7coJaRxkwWkepvvbDfr3kGkQ%2B701yVyKRun%2FRYq2mEnFPddSxRBpsOD4k0opEeq%2F1InWJaB11LJFutu7tLu%2BeaXk3xEBt7DKNIDUINeXwcAjJZzhFZEyXWEbuompKOadzAYy64Y7gWFZwWkPuyPZA21Uc2jAsZmIOO0c3Ba0QVF35gGMgCBgmX6%2Bz%2BMvVGCI0ppeXcr%2BGlG9AKtCBUrbWcQo0nCZojhPIME1DvhBDoqEmBstrWjXticobqNwEc7ET9MQNc2COo0g%2BxMhElasnmvBJ%2FkpAlbM8LwjaIqu2WtuGVIxpTam77NbYGmhsAccaOVbgWHfDDmhi2Zja4smu8eS1w5PY71V5cgc6T71z8gT0BWIqX3hI4CpKZ9YQLugUwyTUfdK1za46a043rtDImn9W1vTYZ8xgspN8hWLxFs3F7xwjfPWcdeYR%2FSpngcEjqgT2eTjTF%2FonhtCv6wudWjYDXNwX6gnD1Bf%2BjZMQZZPrXs6rB0h%2BZWcITtN2XmeoZzC%2FoqmMDIVx8ufnq2fqTC7QNUTwZ3aBeuIPfASFmiMcXNwR6tm3j6DwlB80sdaVHzQezzVImb6zVM8bv55wyVSPkSF9U%2Fy%2FSmG8ja5LpjCMbBm2xn%2BwGCZ4t4OcMhG5%2B0TiOhVxhh%2FzFIbMIuFJd2JK2P7zimY3uIEtP2VT1tbsW7P%2BxOtnXarHXLlEDrvcN0qknj0xfLHmrC7X0fd0GjmlY6qQwOUSh1aDkypgFSdV6vrEOdWNfWvbvlU5rHI81zp%2BXJWWxohhgQhie18OGVdvTcXolO0Bk0JioqwYLpLOtVOu153P57ne8vn84SXvWo7j9wvOW4%2FjtQWovYM0s4r1fe%2BQLjl9nYMbpD%2B6g6vkfz%2F82jG%2FZtyomSKVzvyaftgyFrMdhXgBE47bFcYDnDK8S5e%2BLzDZideD%2BgMO5GAurKMsPL4SEQW3TjWEckHD9RGoDd8LhCSKxVf3M09U%2FP%2BDO%2FoP)
